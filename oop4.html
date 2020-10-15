@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance - Contoh</title>
+</head>
+
+<body>
+    <p id="hasil"></p>
+    <script>
+        // class Mobil {
+        //     constructor(merk) {
+        //         this.namaMobil = merk;
+        //     }
+        //     tampilkan() {
+        //         return "Merk mobil saya adalah " + this.namaMobil;
+        //     }
+        // }
+        class Buku {
+            constructor(namaBuku) {
+                this.namaBuku = namaBuku;
+            }
+            tampilkan() {
+                return "Buku yang berjudul" + this.namaBuku;
+            }
+        }
+        // class Model extends Mobil {
+        //     constructor(merk, mod) {
+        //         super(merk);
+        //         this.model = mod;
+        //     }
+        //     show() {
+        //         return this.tampilkan() + ", dengan model " + this.model;
+        //     }
+        // }
+
+        // let mobilKu = new Model("Jaguar", "XE");
+        // document.getElementById("hasil").innerHTML = mobilKu.show();
+        class Model extends Buku {
+            constructor(namaBuku, mod) {
+                super(namaBuku);
+                this.model = mod;
+            }
+            show() {
+                return this.tampilkan() + " ditulis oleh " + this.model;
+            }
+        }
+
+        let buku = new Model("Single", "Raditya Dika");
+        document.getElementById("hasil").innerHTML = buku.show();
+    </script>
+</body>
+
+</html>
