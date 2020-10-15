@@ -11,13 +11,20 @@
     <p id="hasil"></p>
     <script>
         class Bilangan {
-            static methodKu() {
-                return "Hallo..."
+            constructor(angka) {
+                    this.angka = angka;
+                }
+                // static methodKu() {
+                //     return "Hallo..."
+                // }
+            static methodKu(objek) {
+                return "Nilai = " + objek.angka;
             }
         }
         const hasil = document.getElementById("hasil");
-        let bil = new Bilangan();
-        hasil.innerHTML = "Hasil = " + Bilangan.methodKu();
+        let bil = new Bilangan(100);
+        // hasil.innerHTML = "Hasil = " + Bilangan.methodKu();
+        hasil.innerHTML = Bilangan.methodKu(bil);
     </script>
 </body>
 
