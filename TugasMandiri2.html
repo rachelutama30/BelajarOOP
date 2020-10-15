@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 2</title>
+</head>
+
+<body>
+    <script>
+        class Hewan {
+            constructor(nama, jenis) {
+                this.nama = nama;
+                //tanda "._jenis" merupakan pembeda, bisa jadi getter/setter
+                this._jenis = null;
+            }
+            get jenis() {
+                return `Jenis hewannya adalah ${this._jenis}`;
+            }
+            set jenis(jenis) {
+                this._jenis = `${jenis} anak`;
+            }
+        }
+
+        const hewanKucing = new Hewan("Kucing", "Mamalia");
+        hewanKucing.jenis = 'Melahirkan';
+        console.log(hewanKucing.jenis);
+    </script>
+</body>
+
+</html>
