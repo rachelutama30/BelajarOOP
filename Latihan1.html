@@ -35,15 +35,15 @@
         objBuku = new Buku("001", "Manusia Setengah Salmon", "Raditya Dika");
         const hasil = document.getElementById("hasil");
         let dataBuku1 =
-            "ID Buku : " + objBuku.idBuku() + "<br>" +
-            "Judul Buku : " + objBuku.judulBuku() + "<br>" +
-            "Pengarang : " + objBuku.pengarang();
+            "ID Buku : " + objBuku.idBuku + "<br>" +
+            "Judul Buku : " + objBuku.judulBuku + "<br>" +
+            "Pengarang : " + objBuku.pengarang;
 
         objBuku2 = new Buku("002", "Harry Potter", "Joanne Kathleen Rowling");
         let dataBuku2 = "<hr>" +
-            "ID Buku : " + objBuku2.idBuku() + "<br>" +
-            "Judul Buku : " + objBuku2.judulBuku() + "<br>" +
-            "Pengarang : " + objBuku2.pengarang();
+            "ID Buku : " + objBuku2.idBuku + "<br>" +
+            "Judul Buku : " + objBuku2.judulBuku + "<br>" +
+            "Pengarang : " + objBuku2.pengarang;
         hasil.innerHTML = dataBuku1 + dataBuku2;
     </script>
 </body>
