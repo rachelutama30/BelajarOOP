@@ -17,17 +17,19 @@
                 this.judulBuku = judulBuku;
                 this.pengarang = pengarang;
             }
-            get idBuku() {
+            get id_Buku() {
                 return idBuku;
             }
-            get judulBuku() {
+            get judul_Buku() {
                 return judulBuku;
             }
-            get pengarang() {
+            get pengarang_() {
                 return pengarang;
             }
             tampil = () => {
-                return this.idBuku;
+                return "ID Buku : " + this.idBuku +
+                    "<br/>Judul Buku : " + this.judulBuku +
+                    "<br/>Pengarang : " + this.pengarang;
             }
 
         }
@@ -45,6 +47,8 @@
             "Judul Buku : " + objBuku2.judulBuku + "<br>" +
             "Pengarang : " + objBuku2.pengarang;
         hasil.innerHTML = dataBuku1 + dataBuku2;
+        document.write(objBuku.tampil());
+        // document.write(objBuku2.tampil());
     </script>
 </body>
 
