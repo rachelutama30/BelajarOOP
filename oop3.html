@@ -18,25 +18,48 @@
                 this.namaBelakang = namaBelakang;
                 this.umur = umur;
             }
+            get getNim() {
+                return this.nim;
+            }
+            get getNamaDepan() {
+                return this.namaDepan;
+            }
+            get getNamaBelakang() {
+                return this.namaBelakang;
+            }
+            get getNamaLengkap() {
+                return this.namaDepan + " " + this.namaBelakang;
+            }
+            get getUmur() {
+                return this.umur;
+            }
+            tampil = () => {
+                // return this.getNamaLengkap;
+                return "NIM : " + this.getNim + "<br>" +
+                    "Nama Lengkap : " + this.getNamaDepan + " " + this.getNamaBelakang;
+            }
         }
+
         let dataMhs = "";
         objMhs = new Mahasiswa("001", "Rachel", "Utama", 22);
         const hasil = document.getElementById("hasil");
         // document.getElementById("hasil").innerHTML = 
         let dataMhs1 =
-            "NIM : " + objMhs.nim + "</br>" +
-            "Nama Depan : " + objMhs.namaDepan + "</br>" +
-            "Nama Belakang : " + objMhs.namaBelakang + "</br>" +
-            "Umur : " + objMhs.umur;
+            "NIM : " + objMhs.getNim + "</br>" +
+            "Nama Depan : " + objMhs.getNamaDepan + "</br>" +
+            "Nama Belakang : " + objMhs.getNamaBelakang + "</br>" +
+            "Umur : " + objMhs.getUmur;
 
         objMhs2 = new Mahasiswa("002", "Clara", "Fenisia", 18);
         let dataMhs2 = "<hr>" +
-            "NIM : " + objMhs2.nim + "</br>" +
-            "Nama Depan : " + objMhs2.namaDepan + "</br>" +
-            "Nama Belakang : " + objMhs2.namaBelakang + "</br>" +
-            "Umur : " + objMhs2.umur;
+            "NIM : " + objMhs2.getNim + "</br>" +
+            "Nama Depan : " + objMhs2.getNamaDepan + "</br>" +
+            "Nama Belakang : " + objMhs2.getNamaBelakang + "</br>" +
+            "Umur : " + objMhs2.getUmur;
 
         hasil.innerHTML = dataMhs1 + dataMhs2;
+        // alert(objMhs.tampil());
+        document.write(objMhs.tampil());
     </script>
 </body>
 
