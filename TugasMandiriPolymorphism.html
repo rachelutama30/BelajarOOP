@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri Polymorphism</title>
+</head>
+
+<body>
+    <script>
+        class Transportasi {
+            constructor(name) {
+                this.name = name;
+            }
+            jalur() {
+                console.log(`${this.name} pergi dengan transportasi darat`);
+            }
+        }
+
+        class Persons extends Transportasi {
+            constructor(name) {
+                super(name)
+            }
+            jalur() {
+                console.log(`${this.name} pergi dengan transportasi udara`);
+            }
+        }
+
+        const seiya = new Persons("Seiya");
+        console.log(seiya.jalur());
+    </script>
+</body>
+
+</html>
